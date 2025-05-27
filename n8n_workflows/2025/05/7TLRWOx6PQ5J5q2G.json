@@ -142,24 +142,6 @@
         ]
       ]
     },
-    "Execute Workflow": {
-      "main": [
-        [
-          {
-            "node": "Loop Over Items",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "Loop Over Items",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Schedule Trigger": {
       "main": [
         [
@@ -238,6 +220,24 @@
         [
           {
             "node": "Config",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Workflow": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Loop Over Items",
             "type": "main",
             "index": 0
           }
@@ -636,22 +636,6 @@
     },
     {
       "parameters": {
-        "workflowId": "={{ $workflow.id }}",
-        "mode": "each",
-        "options": {}
-      },
-      "id": "ce741f8e-99ee-48e4-bfff-7af6852f0e2d",
-      "name": "Execute Workflow",
-      "type": "n8n-nodes-base.executeWorkflow",
-      "position": [
-        1300,
-        200
-      ],
-      "typeVersion": 1,
-      "onError": "continueErrorOutput"
-    },
-    {
-      "parameters": {
         "resource": "file",
         "operation": "get",
         "owner": {
@@ -721,6 +705,34 @@
         840
       ],
       "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "7TLRWOx6PQ5J5q2G",
+          "mode": "list",
+          "cachedResultName": "Backup to GitHub"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        1360,
+        200
+      ],
+      "id": "d7ba7191-96cf-4121-9afa-dbdddcc67736",
+      "name": "Execute Workflow",
+      "onError": "continueErrorOutput"
     }
   ],
   "pinData": {},
@@ -733,6 +745,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-05-27T22:23:44.805Z",
-  "versionId": "20b6e3d0-e82f-4bb2-8be0-31e9be305c7e"
+  "updatedAt": "2025-05-27T22:39:21.868Z",
+  "versionId": "82fdf136-c216-49b8-a998-7bb89a3db9d5"
 }
