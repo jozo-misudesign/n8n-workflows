@@ -215,17 +215,6 @@
         ]
       ]
     },
-    "Execute Workflow Trigger": {
-      "main": [
-        [
-          {
-            "node": "Config",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Execute Workflow": {
       "main": [
         [
@@ -238,6 +227,17 @@
         [
           {
             "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Workflow Trigger": {
+      "main": [
+        [
+          {
+            "node": "Config",
             "type": "main",
             "index": 0
           }
@@ -277,17 +277,6 @@
       "position": [
         0,
         460
-      ],
-      "typeVersion": 1
-    },
-    {
-      "parameters": {},
-      "id": "bbe729e5-24c5-4482-9bdd-909bcf47aa6b",
-      "name": "Execute Workflow Trigger",
-      "type": "n8n-nodes-base.executeWorkflowTrigger",
-      "position": [
-        60,
-        840
       ],
       "typeVersion": 1
     },
@@ -733,6 +722,19 @@
       "id": "d7ba7191-96cf-4121-9afa-dbdddcc67736",
       "name": "Execute Workflow",
       "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "inputSource": "passthrough"
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        40,
+        840
+      ],
+      "id": "0c84afe5-1c63-4dce-a4a7-780ee16f8e45",
+      "name": "Execute Workflow Trigger"
     }
   ],
   "pinData": {},
@@ -745,6 +747,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-05-27T22:39:21.868Z",
-  "versionId": "82fdf136-c216-49b8-a998-7bb89a3db9d5"
+  "updatedAt": "2025-05-27T22:42:25.791Z",
+  "versionId": "9227e2d7-41ce-493b-bb3b-d0a82914f22d"
 }
